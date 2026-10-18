@@ -6,7 +6,7 @@
 <title>Ember Grill — Restaurant</title>
 <meta name="description" content="Ember Grill. Flame-grilled meats, fresh sides and a warm table. Open daily.">
 <style>
-  :root{--dark:#181512;--dark2:#241f1a;--cream:#faf6ef;--sand:#efe7d8;--accent:#d4501e;--accent-d:#b3410f;--text:#2b2621;--muted:#6d655b;--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+  :root{--dark:#181512;--dark2:#241f1a;--cream:#faf6ef;--sand:#efe7d8;--accent:#bc4316;--accent-d:#9e360f;--text:#2b2621;--muted:#6d655b;--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{font-family:var(--body);color:var(--text);background:var(--cream);line-height:1.65;font-size:16px}
@@ -18,7 +18,7 @@
   h2{font-family:var(--head);font-size:clamp(30px,4vw,44px);line-height:1.15;color:var(--dark);margin-bottom:16px}
   .center{text-align:center}
   .sub{max-width:580px;color:var(--muted);margin:0 auto 46px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body);transition:.2s}
+  .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body)}
   .btn:hover{background:var(--accent-d);border-color:var(--accent-d)}
   .btn.ghost{background:transparent;border-color:#fff}
   .btn.ghost:hover{background:#fff;color:var(--dark)}
@@ -36,7 +36,7 @@
   .burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
 
   /* hero */
-  .hero{min-height:100vh;display:flex;align-items:center;text-align:center;color:#fff;padding:120px 0 80px;background:#181512 url("https://images.pexels.com/photos/32351197/pexels-photo-32351197.jpeg?auto=compress&cs=tinysrgb&w=1800") center/cover no-repeat;position:relative}
+  .hero{min-height:100vh;display:flex;align-items:center;text-align:center;color:#fff;padding:120px 0 80px;background:#181512 url("https://images.pexels.com/photos/32351197/pexels-photo-32351197.jpeg?auto=compress&cs=tinysrgb&w=1000") center/cover no-repeat}
   .hero::before{content:"";position:absolute;inset:0;background:rgba(15,12,9,.62)}
   .hero .container{position:relative}
   .hero .kicker{color:#f0a36f}
@@ -79,7 +79,7 @@
   .item img{width:70px;height:70px;border-radius:6px;object-fit:cover;flex-shrink:0;background:var(--dark2)}
   .item .content{flex-grow:1}
   .item .top{display:flex;justify-content:space-between;gap:16px}
-  .item h4{font-size:17px;font-weight:600;color:var(--dark)}
+  .item h3{font-size:17px;font-weight:600;color:var(--dark)}
   .item .p{color:var(--accent);font-weight:700}
   .item p{color:var(--muted);font-size:14px}
 
@@ -140,6 +140,7 @@
   </div>
 </header>
 
+<main id="main" role="main">
 <section class="hero" id="top">
   <div class="container">
     <div class="kicker">Flame-grilled · Open daily</div>
@@ -217,81 +218,81 @@
       <!-- Starters -->
       <div class="item" data-c="start">
         <img src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Hummus" loading="lazy">
-        <div class="content"><div class="top"><h4>Hummus &amp; Warm Bread</h4><span class="p">$7</span></div><p>Creamy chickpea dip with olive oil and paprika.</p></div>
+        <div class="content"><div class="top"><h3>Hummus &amp; Warm Bread</h3><span class="p">$7</span></div><p>Creamy chickpea dip with olive oil and paprika.</p></div>
       </div>
       <div class="item" data-c="start">
         <img src="https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chicken Wings" loading="lazy">
-        <div class="content"><div class="top"><h4>Crispy Chicken Wings</h4><span class="p">$9</span></div><p>Tossed in our smoky house glaze.</p></div>
+        <div class="content"><div class="top"><h3>Crispy Chicken Wings</h3><span class="p">$9</span></div><p>Tossed in our smoky house glaze.</p></div>
       </div>
       <div class="item" data-c="start">
         <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Soup" loading="lazy">
-        <div class="content"><div class="top"><h4>Soup of the Day</h4><span class="p">$6</span></div><p>Ask your server for today's pot.</p></div>
+        <div class="content"><div class="top"><h3>Soup of the Day</h3><span class="p">$6</span></div><p>Ask your server for today's pot.</p></div>
       </div>
       <div class="item" data-c="start">
         <img src="https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Salad" loading="lazy">
-        <div class="content"><div class="top"><h4>Garden Salad</h4><span class="p">$7</span></div><p>Crisp greens, tomato, cucumber, lemon dressing.</p></div>
+        <div class="content"><div class="top"><h3>Garden Salad</h3><span class="p">$7</span></div><p>Crisp greens, tomato, cucumber, lemon dressing.</p></div>
       </div>
       
       <!-- Grill -->
       <div class="item" data-c="grill">
         <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mixed Kebab" loading="lazy">
-        <div class="content"><div class="top"><h4>Mixed Kebab Platter</h4><span class="p">$18</span></div><p>Beef and chicken skewers, grilled peppers, sauce.</p></div>
+        <div class="content"><div class="top"><h3>Mixed Kebab Platter</h3><span class="p">$18</span></div><p>Beef and chicken skewers, grilled peppers, sauce.</p></div>
       </div>
       <div class="item" data-c="grill">
         <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lamb Skewers" loading="lazy">
-        <div class="content"><div class="top"><h4>Charcoal Lamb Skewers</h4><span class="p">$21</span></div><p>Marinated overnight, served with bread.</p></div>
+        <div class="content"><div class="top"><h3>Charcoal Lamb Skewers</h3><span class="p">$21</span></div><p>Marinated overnight, served with bread.</p></div>
       </div>
       <div class="item" data-c="grill">
         <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chicken Grill" loading="lazy">
-        <div class="content"><div class="top"><h4>Chicken &amp; Pepper Grill</h4><span class="p">$16</span></div><p>Grilled chicken, peppers and lemon.</p></div>
+        <div class="content"><div class="top"><h3>Chicken &amp; Pepper Grill</h3><span class="p">$16</span></div><p>Grilled chicken, peppers and lemon.</p></div>
       </div>
       <div class="item" data-c="grill">
         <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Steak" loading="lazy">
-        <div class="content"><div class="top"><h4>Ribeye Steak</h4><span class="p">$29</span></div><p>300g, flame-grilled to your liking, with butter.</p></div>
+        <div class="content"><div class="top"><h3>Ribeye Steak</h3><span class="p">$29</span></div><p>300g, flame-grilled to your liking, with butter.</p></div>
       </div>
       <div class="item" data-c="grill">
         <img src="https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Family Feast" loading="lazy">
-        <div class="content"><div class="top"><h4>Family Grill Feast</h4><span class="p">$64</span></div><p>Mixed grill for four with sides and bread.</p></div>
+        <div class="content"><div class="top"><h3>Family Grill Feast</h3><span class="p">$64</span></div><p>Mixed grill for four with sides and bread.</p></div>
       </div>
       <div class="item" data-c="grill">
         <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Burger" loading="lazy">
-        <div class="content"><div class="top"><h4>Smash Burger</h4><span class="p">$14</span></div><p>Double beef, cheese, pickles, house sauce, fries.</p></div>
+        <div class="content"><div class="top"><h3>Smash Burger</h3><span class="p">$14</span></div><p>Double beef, cheese, pickles, house sauce, fries.</p></div>
       </div>
 
       <!-- Sides -->
       <div class="item" data-c="side">
         <img src="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Rice" loading="lazy">
-        <div class="content"><div class="top"><h4>Steamed Rice</h4><span class="p">$4</span></div><p>Fragrant long-grain rice.</p></div>
+        <div class="content"><div class="top"><h3>Steamed Rice</h3><span class="p">$4</span></div><p>Fragrant long-grain rice.</p></div>
       </div>
       <div class="item" data-c="side">
         <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fries" loading="lazy">
-        <div class="content"><div class="top"><h4>Skin-on Fries</h4><span class="p">$5</span></div><p>Crisp, salted, with dipping sauce.</p></div>
+        <div class="content"><div class="top"><h3>Skin-on Fries</h3><span class="p">$5</span></div><p>Crisp, salted, with dipping sauce.</p></div>
       </div>
       <div class="item" data-c="side">
         <img src="https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Grilled Vegetables" loading="lazy">
-        <div class="content"><div class="top"><h4>Grilled Vegetables</h4><span class="p">$6</span></div><p>Seasonal vegetables off the coals.</p></div>
+        <div class="content"><div class="top"><h3>Grilled Vegetables</h3><span class="p">$6</span></div><p>Seasonal vegetables off the coals.</p></div>
       </div>
       <div class="item" data-c="side">
         <img src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bread" loading="lazy">
-        <div class="content"><div class="top"><h4>Fresh Bread</h4><span class="p">$3</span></div><p>Baked in-house all day.</p></div>
+        <div class="content"><div class="top"><h3>Fresh Bread</h3><span class="p">$3</span></div><p>Baked in-house all day.</p></div>
       </div>
 
       <!-- Drinks & Dessert -->
       <div class="item" data-c="drink">
         <img src="https://images.pexels.com/photos/2103949/pexels-photo-2103949.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lemonade" loading="lazy">
-        <div class="content"><div class="top"><h4>Fresh Lemonade</h4><span class="p">$4</span></div><p>Squeezed to order, with mint.</p></div>
+        <div class="content"><div class="top"><h3>Fresh Lemonade</h3><span class="p">$4</span></div><p>Squeezed to order, with mint.</p></div>
       </div>
       <div class="item" data-c="drink">
         <img src="https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tea" loading="lazy">
-        <div class="content"><div class="top"><h4>Hot Tea</h4><span class="p">$3</span></div><p>Black or green, served in a pot.</p></div>
+        <div class="content"><div class="top"><h3>Hot Tea</h3><span class="p">$3</span></div><p>Black or green, served in a pot.</p></div>
       </div>
       <div class="item" data-c="drink">
         <img src="https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Brownie" loading="lazy">
-        <div class="content"><div class="top"><h4>Chocolate Brownie</h4><span class="p">$7</span></div><p>Warm, with vanilla ice cream.</p></div>
+        <div class="content"><div class="top"><h3>Chocolate Brownie</h3><span class="p">$7</span></div><p>Warm, with vanilla ice cream.</p></div>
       </div>
       <div class="item" data-c="drink">
         <img src="https://images.pexels.com/photos/1352274/pexels-photo-1352274.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ice Cream" loading="lazy">
-        <div class="content"><div class="top"><h4>Ice Cream Cup</h4><span class="p">$5</span></div><p>Vanilla, chocolate or strawberry.</p></div>
+        <div class="content"><div class="top"><h3>Ice Cream Cup</h3><span class="p">$5</span></div><p>Vanilla, chocolate or strawberry.</p></div>
       </div>
     </div>
   </div>
@@ -341,6 +342,7 @@
     </form>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="container">
@@ -362,7 +364,7 @@
   var d=document.getElementById('d');d.min=new Date().toISOString().split('T')[0];
   document.getElementById('rf').onsubmit=function(e){
     e.preventDefault();var o=document.getElementById('ok');o.style.display='block';
-    o.textContent='Thanks '+document.getElementById('n').value.split(' ')[0]+'! Your table for '+document.getElementById('g').value+' on '+d.value+' at '+document.getElementById('t').value+' is requested. We will confirm shortly.';
+    o.textContent='Thanks '+document.getElementById('n').value.split(' ')[0]+'! Your table for '+document.getElementById('g').value+' on '+d.value+' at '+document.getElementById('t').value+' is requested.';
     this.reset();d.min=new Date().toISOString().split('T')[0];
   };
 </script>
