@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point Google (and other crawlers) to your sitemap
+Sitemap: https://arifkhan15175-ops.github.io/Ember-Grill-demo/sitemap.xml
