@@ -1,517 +1,573 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ember Grill — Restaurant</title>
-<meta name="description" content="Ember Grill. Flame-grilled meats, fresh sides and a warm table. Open daily.">
-<link rel="canonical" href="https://arifkhan15175-ops.github.io/Ember-Grill-demo/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ember Grill — Restaurant">
-<meta property="og:description" content="Ember Grill. Flame-grilled meats, fresh sides and a warm table. Open daily.">
-<meta property="og:url" content="https://arifkhan15175-ops.github.io/Ember-Grill-demo/">
-<meta property="og:image" content="https://arifkhan15175-ops.github.io/Ember-Grill-demo/assets/pexels-thomas-chauke-437438-32351197.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ember Grill — Restaurant">
-<meta name="twitter:description" content="Ember Grill. Flame-grilled meats, fresh sides and a warm table. Open daily.">
-<meta name="twitter:image" content="https://arifkhan15175-ops.github.io/Ember-Grill-demo/assets/pexels-thomas-chauke-437438-32351197.jpg">
-<style>
-  :root{--dark:#181512;--dark2:#241f1a;--cream:#faf6ef;--sand:#efe7d8;--accent:#bc4316;--accent-d:#9e360f;--text:#2b2621;--muted:#6d655b;--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--shadow:0 18px 40px rgba(28, 20, 15, .12);--glow:rgba(188,67,22,.22)}
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--body);color:var(--text);background:linear-gradient(180deg,#f8f1e8 0%,#f5efe8 35%,#f4efe8 100%);line-height:1.65;font-size:16px;overflow-x:hidden;opacity:0;transition:opacity .9s ease}
-  body.ready{opacity:1}
-  img{display:block;max-width:100%}
-  a{color:inherit;text-decoration:none}
-  .container{width:min(1140px,92%);margin:0 auto}
-  section{padding:84px 0;position:relative}
-  .kicker{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
-  h2{font-family:var(--head);font-size:clamp(30px,4vw,44px);line-height:1.15;color:var(--dark);margin-bottom:16px}
-  .center{text-align:center}
-  .sub{max-width:580px;color:var(--muted);margin:0 auto 46px}
-  .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body);position:relative;overflow:hidden;box-shadow:0 16px 28px rgba(188,67,22,.2);transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease}
-  .btn::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.25),transparent 80%);transform:translateX(-120%);transition:transform .7s ease}
-  .btn:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 20px 34px rgba(188,67,22,.28);background:var(--accent-d);border-color:var(--accent-d)}
-  .btn:hover::before{transform:translateX(120%)}
-  .btn.ghost{background:transparent;border-color:#fff}
-  .btn.ghost:hover{background:#fff;color:var(--dark)}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#181512">
+  <title>Ember Grill Rochdale — Flame-Grilled Restaurant &amp; Menu</title>
+  <meta name="description" content="Ember Grill in Rochdale serves flame-grilled burgers, charcoal kebabs, and platters. View menu and book online.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="geo.region" content="GB-RCH">
+  <meta name="geo.placename" content="Rochdale">
+  <meta name="geo.position" content="53.6134;-2.1561">
+  <meta name="ICBM" content="53.6134, -2.1561">
+  <link rel="canonical" href="https://arifkhan15175-ops.github.io/Ember-Grill-demo/">
+  <link rel="alternate" hreflang="en-GB" href="https://arifkhan15175-ops.github.io/Ember-Grill-demo/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.pexels.com">
 
-  /* scroll reveal */
-  .reveal{opacity:0;transform:translateY(35px) scale(.98);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1), filter .8s ease;filter:blur(6px)}
-  .reveal.in-view{opacity:1;transform:none;filter:none}
-  .delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}.delay-3{transition-delay:.24s}.delay-4{transition-delay:.32s}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ember Grill Rochdale">
+  <meta property="og:title" content="Ember Grill Rochdale — Flame-Grilled Restaurant &amp; Menu">
+  <meta property="og:description" content="Ember Grill in Rochdale serves flame-grilled burgers, charcoal kebabs, and platters. View menu and book online.">
+  <meta property="og:url" content="https://arifkhan15175-ops.github.io/Ember-Grill-demo/">
+  <meta property="og:image" content="https://arifkhan15175-ops.github.io/Ember-Grill-demo/assets/pexels-thomas-chauke-437438-32351197.jpg">
+  <meta property="og:image:alt" content="Ember Grill Rochdale flame-grilled cuisine in Rochdale">
+  <meta property="og:locale" content="en_GB">
 
-  /* header */
-  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .25s,box-shadow .25s}
-  header.solid{background:var(--dark);box-shadow:0 2px 14px rgba(0,0,0,.25)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-  .logo{font-family:var(--head);font-size:27px;font-weight:700;color:#fff;transition:transform .2s ease}
-  .logo:hover{transform:translateY(-1px)}
-  .logo b{color:var(--accent)}
-  .links{display:flex;gap:34px;align-items:center}
-  .links a{color:#fff;font-size:15px;font-weight:500;opacity:.92;position:relative;transition:color .2s ease, transform .2s ease}
-  .links a::after{content:"";position:absolute;left:0;bottom:-7px;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
-  .links a:hover{color:var(--accent);transform:translateY(-1px)}
-  .links a:hover::after{transform:scaleX(1)}
-  .links .btn{padding:10px 22px;color:#fff}
-  .burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@EmberGrillRochdale">
+  <meta name="twitter:title" content="Ember Grill Rochdale — Flame-Grilled Restaurant &amp; Menu">
+  <meta name="twitter:description" content="Ember Grill in Rochdale serves flame-grilled burgers, charcoal kebabs, and platters. View menu and book online.">
+  <meta name="twitter:image" content="https://arifkhan15175-ops.github.io/Ember-Grill-demo/assets/pexels-thomas-chauke-437438-32351197.jpg">
 
-  /* hero */
-  .hero{position:relative;min-height:100vh;display:flex;align-items:center;text-align:center;color:#fff;padding:120px 0 80px;overflow:hidden;isolation:isolate}
-  .hero-media{
-    position:absolute;inset:0;
-    background:url("assets/pexels-thomas-chauke-437438-32351197.jpg") center center / cover no-repeat;
-    transform:scale(1.12) translateY(0);
-    will-change:transform;
-    transition:transform 0.2s linear;
-    filter:saturate(1.05) contrast(1.08);
-  }
-  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,12,9,.72),rgba(15,12,9,.55),rgba(15,12,9,.7));z-index:1}
-  .hero::after{content:"";position:absolute;inset:-20% auto auto -10%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(255,146,63,.32), rgba(255,146,63,0) 72%);filter:blur(18px);animation:floatGlow 12s ease-in-out infinite alternate;z-index:1}
-  .hero .smoke,
-  .hero .smoke-2,
-  .hero .smoke-3{
-    position:absolute;inset:auto auto -24% -8%;
-    width:62vw;max-width:780px;height:62vw;max-height:780px;border-radius:50%;
-    background:radial-gradient(circle, rgba(255,255,255,.12) 0%, rgba(255,255,255,.05) 18%, rgba(255,255,255,0) 70%);
-    filter:blur(28px);opacity:.9;z-index:1;pointer-events:none;
-    animation:smokeDrift 18s ease-in-out infinite alternate;
-  }
-  .hero .smoke-2{left:auto;right:-8%;bottom:-18%;animation-delay:4s}
-  .hero .smoke-3{left:30%;right:auto;bottom:-26%;width:48vw;max-width:640px;height:48vw;max-height:640px;animation-delay:8s}
-  .hero .container{position:relative;z-index:2}
-  .hero .kicker{color:#f0a36f}
-  .hero h1{font-family:var(--head);font-size:clamp(40px,7vw,78px);line-height:1.08;margin:6px 0 20px;letter-spacing:-.04em;text-shadow:0 6px 22px rgba(0,0,0,.25)}
-  .hero p{max-width:560px;margin:0 auto 34px;font-size:19px;opacity:.92}
-  .hero .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-
-  /* info bar */
-  .info{background:var(--dark);color:#fff;padding:0}
-  .info .container{display:grid;grid-template-columns:repeat(3,1fr)}
-  .info div{padding:30px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
-  .info div:last-child{border:0}
-  .info small{display:block;color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;margin-bottom:4px}
-
-  /* about */
-  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-  .about img{width:100%;height:480px;object-fit:cover;border-radius:6px;background:var(--dark2);box-shadow:var(--shadow);transition:transform .3s ease, box-shadow .3s ease}
-  .about img:hover{transform:scale(1.01) translateY(-3px);box-shadow:0 24px 42px rgba(28,20,15,.18)}
-  .about p{color:var(--muted);margin-bottom:16px}
-  .stats{display:flex;gap:40px;margin-top:26px}
-  .stats strong{display:block;font-family:var(--head);font-size:38px;color:var(--accent);line-height:1}
-  .stats span{font-size:14px;color:var(--muted)}
-
-  /* signature */
-  .sig{background:var(--sand)}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-  .card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.07);transition:transform .25s ease, box-shadow .25s ease, border .25s ease;position:relative}
-  .card::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%, rgba(255,255,255,.25), transparent 80%);transform:translateX(-120%);transition:transform .7s ease;pointer-events:none}
-  .card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 22px 34px rgba(28,20,15,.12)}
-  .card:hover::before{transform:translateX(120%)}
-  .card img{width:100%;height:240px;object-fit:cover;background:var(--dark2);transition:transform .5s ease}
-  .card:hover img{transform:scale(1.06)}
-  .card div{padding:22px 24px 26px}
-  .card h3{font-family:var(--head);font-size:23px;color:var(--dark);margin-bottom:6px;display:flex;justify-content:space-between;gap:10px}
-  .card h3 span{color:var(--accent)}
-  .card p{color:var(--muted);font-size:15px}
-
-  /* menu */
-  .tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
-  .tabs button{background:none;border:2px solid #d8cfbf;padding:10px 22px;border-radius:30px;font:600 14px var(--body);cursor:pointer;color:var(--text);transition:all .28s cubic-bezier(.2,.7,.2,1);position:relative;overflow:hidden}
-  .tabs button::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.08);transform:translateX(-100%);transition:transform .28s ease}
-  .tabs button:hover::before{transform:translateX(100%)}
-  .tabs button.on,.tabs button:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-1px) scale(1.02)}
-  .list{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px}
-  .item{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid #e3dac9;opacity:1;transform:translateY(0);transition:transform .22s ease, opacity .22s ease, filter .22s ease, max-height .28s ease, padding .28s ease;max-height:200px;overflow:hidden}
-  .item:hover{transform:translateX(4px)}
-  .item.hide{opacity:0;max-height:0;pointer-events:none;padding-top:0;padding-bottom:0;border-bottom-width:0;filter:blur(4px);transform:translateY(12px)}
-  .item img{width:70px;height:70px;border-radius:6px;object-fit:cover;flex-shrink:0;background:var(--dark2);transition:transform .25s ease, box-shadow .25s ease}
-  .item:hover img{transform:scale(1.08);box-shadow:0 14px 22px rgba(28,20,15,.16)}
-  .item .content{flex-grow:1}
-  .item .top{display:flex;justify-content:space-between;gap:16px}
-  .item h3{font-size:17px;font-weight:600;color:var(--dark)}
-  .item .p{color:var(--accent);font-weight:700}
-  .item p{color:var(--muted);font-size:14px}
-
-  /* gallery */
-  .gal{background:var(--dark);padding:84px 0}
-  .gal h2{color:#fff}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .grid img{width:100%;height:240px;object-fit:cover;border-radius:6px;background:var(--dark2);transition:transform .35s ease, filter .35s ease, box-shadow .35s ease;box-shadow:0 10px 30px rgba(0,0,0,.12)}
-  .grid img:hover{transform:translateY(-5px) scale(1.02);filter:saturate(1.1);box-shadow:0 18px 36px rgba(0,0,0,.2)}
-
-  /* contact */
-  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
-  .contact h3{font-family:var(--head);font-size:26px;margin-bottom:18px;color:var(--dark)}
-  .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #e3dac9}
-  .row b{font-weight:600}
-  .contact p{color:var(--muted);margin-top:18px}
-  form{background:#fff;padding:34px;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.07);transition:transform .25s ease, box-shadow .25s ease}
-  form:hover{transform:translateY(-3px);box-shadow:0 18px 30px rgba(28,20,15,.1)}
-  .f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
-  input,select{width:100%;padding:12px;border:1.5px solid #d8cfbf;border-radius:4px;font:16px var(--body);margin-bottom:16px;background:#fff;transition:border-color .2s ease, box-shadow .2s ease}
-  input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(188,67,22,.08)}
-  form .btn{width:100%}
-  #ok{display:none;margin-top:16px;padding:13px;background:#e9f6ec;color:#1f6b36;border-radius:4px;font-size:15px}
-
-  footer{background:var(--dark);color:#bdb4a6;padding:46px 0 30px;text-align:center;font-size:14px}
-  footer .logo{display:block;margin-bottom:10px}
-
-  @keyframes floatGlow{0%{transform:translate3d(-10px,30px,0) scale(1)}50%{transform:translate3d(40px,-10px,0) scale(1.08)}100%{transform:translate3d(10px,26px,0) scale(1)}}
-  @keyframes smokeDrift{0%{transform:translate3d(0,0,0) scale(.96);opacity:.45}100%{transform:translate3d(30px,-16px,0) scale(1.12);opacity:.9}}
-  @media(max-width:860px){
-    section{padding:62px 0}
-    .burger{display:block}
-    .links{position:absolute;top:76px;left:0;right:0;background:var(--dark);flex-direction:column;padding:24px 0;gap:20px;display:none}
-    .links.open{display:flex}
-    .about-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
-    .about img{height:320px}
-    .cards{grid-template-columns:1fr}
-    .list{grid-template-columns:1fr}
-    .info .container{grid-template-columns:1fr}
-    .info div{border-right:0;border-bottom:1px solid rgba(255,255,255,.1);padding:20px}
-    .grid{grid-template-columns:1fr 1fr}
-    .grid img{height:180px}
-    .f2{grid-template-columns:1fr}
-  }
-  @media (prefers-reduced-motion: reduce){
-    *{scroll-behavior:auto !important;animation:none !important;transition:none !important}
-    .reveal{opacity:1;transform:none;filter:none}
-  }
-</style>
+  <style>
+    :root{--dark:#181512;--dark2:#241f1a;--cream:#faf6ef;--sand:#efe7d8;--accent:#bc4316;--accent-d:#9e360f;--text:#2b2621;--muted:#6d655b;--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--shadow:0 20px 42px rgba(28,20,15,.12)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:var(--body);color:var(--text);background:linear-gradient(180deg,#f8f1e8 0%,#f5efe8 35%,#f4efe8 100%);line-height:1.65;font-size:16px;overflow-x:hidden;opacity:0;transition:opacity .5s ease}
+    body.ready{opacity:1}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1140px,92%);margin:0 auto}
+    section{padding:84px 0;position:relative}
+    .kicker{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+    h2{font-family:var(--head);font-size:clamp(30px,4vw,44px);line-height:1.15;color:var(--dark);margin-bottom:16px}
+    .center{text-align:center}
+    .sub{max-width:580px;color:var(--muted);margin:0 auto 46px}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body);position:relative;overflow:hidden;transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease}
+    .btn::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.25),transparent 80%);transform:translateX(-120%);transition:transform .7s ease}
+    .btn:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 20px 34px rgba(188,67,22,.28);background:var(--accent-d);border-color:var(--accent-d)}
+    .btn:hover::before{transform:translateX(120%)}
+    .btn.ghost{background:transparent;border-color:#fff}
+    .btn.ghost:hover{background:#fff;color:var(--dark)}
+    .reveal{opacity:0;transform:translateY(35px) scale(.98);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1), filter .8s ease;filter:blur(6px)}
+    .reveal.in-view{opacity:1;transform:none;filter:none}
+    .delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}.delay-3{transition-delay:.24s}.delay-4{transition-delay:.32s}
+    header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .25s,box-shadow .25s}
+    header.solid{background:var(--dark);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+    .logo{font-family:var(--head);font-size:27px;font-weight:700;color:#fff;transition:transform .2s ease}
+    .logo:hover{transform:translateY(-1px)}
+    .logo b{color:var(--accent)}
+    .links{display:flex;gap:34px;align-items:center}
+    .links a{color:#fff;font-size:15px;font-weight:500;opacity:.92;position:relative;transition:color .2s ease, transform .2s ease}
+    .links a::after{content:"";position:absolute;left:0;bottom:-7px;height:2px;width:100%;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+    .links a:hover{color:var(--accent);transform:translateY(-1px)}
+    .links a:hover::after{transform:scaleX(1)}
+    .links .btn{padding:10px 22px;color:#fff}
+    .burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;text-align:center;color:#fff;padding:120px 0 80px;overflow:hidden;isolation:isolate}
+    .hero-media{position:absolute;inset:0;background:url("assets/pexels-thomas-chauke-437438-32351197.jpg") center center / cover no-repeat;transform:scale(1.12) translateY(0);will-change:transform;transition:transform 0.2s linear;filter:saturate(1.05) contrast(1.08)}
+    .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,12,9,.72),rgba(15,12,9,.55),rgba(15,12,9,.7));z-index:1}
+    .hero::after{content:"";position:absolute;inset:-20% auto auto -10%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(255,146,63,.32), rgba(255,146,63,0) 72%);filter:blur(12px);z-index:1}
+    .hero .smoke,.hero .smoke-2,.hero .smoke-3{position:absolute;inset:auto auto -24% -8%;width:62vw;max-width:780px;height:62vw;max-height:780px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,.12) 0%, rgba(255,255,255,.05) 18%, rgba(255,255,255,0) 70%);filter:blur(28px);opacity:.9;z-index:1;pointer-events:none;animation:smokeDrift 18s ease-in-out infinite alternate}
+    .hero .smoke-2{left:auto;right:-8%;bottom:-18%;animation-delay:4s}
+    .hero .smoke-3{left:30%;right:auto;bottom:-26%;width:48vw;max-width:640px;height:48vw;max-height:640px;animation-delay:8s}
+    .hero .container{position:relative;z-index:2}
+    .hero .kicker{color:#f0a36f}
+    .hero h1{font-family:var(--head);font-size:clamp(40px,7vw,78px);line-height:1.08;margin:6px 0 20px;letter-spacing:-.04em;text-shadow:0 6px 22px rgba(0,0,0,.25)}
+    .hero p{max-width:560px;margin:0 auto 34px;font-size:19px;opacity:.92}
+    .hero .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .info{background:var(--dark);color:#fff;padding:0}
+    .info .container{display:grid;grid-template-columns:repeat(3,1fr)}
+    .info div{padding:30px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+    .info div:last-child{border:0}
+    .info small{display:block;color:var(--accent);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px;margin-bottom:4px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+    .about img{width:100%;height:480px;object-fit:cover;border-radius:6px;background:var(--dark2);box-shadow:var(--shadow);transition:transform .3s ease, box-shadow .3s ease}
+    .about img:hover{transform:scale(1.01) translateY(-3px);box-shadow:0 24px 42px rgba(28,20,15,.18)}
+    .about p{color:var(--muted);margin-bottom:16px}
+    .stats{display:flex;gap:40px;margin-top:26px}
+    .stats strong{display:block;font-family:var(--head);font-size:38px;color:var(--accent);line-height:1}
+    .stats span{font-size:14px;color:var(--muted)}
+    .sig{background:var(--sand)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+    .card{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.07);transition:transform .25s ease, box-shadow .25s ease, border .25s ease;position:relative}
+    .card::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%, rgba(255,255,255,.25), transparent 80%);transform:translateX(-120%);transition:transform .7s ease}
+    .card:hover{transform:translateY(-8px) scale(1.01);box-shadow:0 22px 34px rgba(28,20,15,.12)}
+    .card:hover::before{transform:translateX(120%)}
+    .card img{width:100%;height:240px;object-fit:cover;background:var(--dark2);transition:transform .5s ease}
+    .card:hover img{transform:scale(1.06)}
+    .card div{padding:22px 24px 26px}
+    .card h3{font-family:var(--head);font-size:23px;color:var(--dark);margin-bottom:6px;display:flex;justify-content:space-between;gap:10px}
+    .card h3 span{color:var(--accent)}
+    .card p{color:var(--muted);font-size:15px}
+    .tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+    .tabs button{background:none;border:2px solid #d8cfbf;padding:10px 22px;border-radius:30px;font:600 14px var(--body);cursor:pointer;color:var(--text);transition:all .28s cubic-bezier(.2,.7,.2,1);position:relative;overflow:hidden;}
+    .tabs button::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.08);transform:translateX(-100%);transition:transform .28s ease}
+    .tabs button:hover::before{transform:translateX(100%)}
+    .tabs button.on,.tabs button:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-1px) scale(1.02)}
+    .list{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px}
+    .item{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid #e3dac9;opacity:1;transform:translateY(0);transition:transform .22s ease, opacity .22s ease, filter .22s ease, max-height .22s ease, padding .22s ease}
+    .item:hover{transform:translateX(4px)}
+    .item.hide{opacity:0;max-height:0;pointer-events:none;padding-top:0;padding-bottom:0;border-bottom-width:0;filter:blur(4px);transform:translateY(12px)}
+    .item img{width:70px;height:70px;border-radius:6px;object-fit:cover;flex-shrink:0;background:var(--dark2);transition:transform .25s ease, box-shadow .25s ease}
+    .item:hover img{transform:scale(1.08);box-shadow:0 14px 22px rgba(28,20,15,.16)}
+    .item .content{flex-grow:1}
+    .item .top{display:flex;justify-content:space-between;gap:16px}
+    .item h3{font-size:17px;font-weight:600;color:var(--dark)}
+    .item .p{color:var(--accent);font-weight:700}
+    .item p{color:var(--muted);font-size:14px}
+    .gal{background:var(--dark);padding:84px 0}
+    .gal h2{color:#fff}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid img{width:100%;height:240px;object-fit:cover;border-radius:6px;background:var(--dark2);transition:transform .35s ease, filter .35s ease, box-shadow .35s ease;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+    .grid img:hover{transform:translateY(-5px) scale(1.02);filter:saturate(1.1);box-shadow:0 18px 36px rgba(0,0,0,.2)}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+    .contact h3{font-family:var(--head);font-size:26px;margin-bottom:18px;color:var(--dark)}
+    .row{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #e3dac9}
+    .row b{font-weight:600}
+    .contact p{color:var(--muted);margin-top:18px}
+    form{background:#fff;padding:34px;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.07);transition:transform .25s ease, box-shadow .25s ease}
+    form:hover{transform:translateY(-3px);box-shadow:0 18px 30px rgba(28,20,15,.1)}
+    .f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
+    input,select{width:100%;padding:12px;border:1.5px solid #d8cfbf;border-radius:4px;font:16px var(--body);margin-bottom:16px;background:#fff;transition:border-color .2s ease, box-shadow .2s ease}
+    input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(188,67,22,.08)}
+    form .btn{width:100%}
+    #ok{display:none;margin-top:16px;padding:13px;background:#e9f6ec;color:#1f6b36;border-radius:4px;font-size:15px}
+    footer{background:var(--dark);color:#bdb4a6;padding:46px 0 30px;text-align:center;font-size:14px}
+    footer .logo{display:block;margin-bottom:10px}
+    @keyframes floatGlow{0%{transform:translate3d(-10px,30px,0) scale(1)}50%{transform:translate3d(40px,-10px,0) scale(1.08)}100%{transform:translate3d(10px,26px,0) scale(1)}}
+    @keyframes smokeDrift{0%{transform:translate3d(0,0,0) scale(.96);opacity:.45}100%{transform:translate3d(30px,-16px,0) scale(1.12);opacity:.9}}
+    @media(max-width:860px){
+      section{padding:62px 0}
+      .burger{display:block}
+      .links{position:absolute;top:76px;left:0;right:0;background:var(--dark);flex-direction:column;padding:24px 0;gap:20px;display:none}
+      .links.open{display:flex}
+      .about-grid,.contact-grid{grid-template-columns:1fr;gap:36px}
+      .about img{height:320px}
+      .cards{grid-template-columns:1fr}
+      .list{grid-template-columns:1fr}
+      .info .container{grid-template-columns:1fr}
+      .info div{border-right:0;border-bottom:1px solid rgba(255,255,255,.1);padding:20px}
+      .grid{grid-template-columns:1fr 1fr}
+      .grid img{height:180px}
+      .f2{grid-template-columns:1fr}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{scroll-behavior:auto !important;animation:none !important;transition:none !important}
+      .reveal{opacity:1;transform:none;filter:none}
+    }
+  </style>
 </head>
 <body>
-
-<header id="hd">
-  <div class="container nav">
-    <a class="logo" href="#top">Ember<b>.</b>Grill</a>
-    <button class="burger" id="bg" aria-label="Menu">&#9776;</button>
-    <nav class="links" id="lk">
-      <a href="#about">About</a>
-      <a href="#signature">Favourites</a>
-      <a href="#menu">Menu</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a class="btn" href="#contact">Book a Table</a>
-    </nav>
-  </div>
-</header>
-
-<main id="main" role="main">
-<section class="hero reveal" id="top">
-  <div class="hero-media" aria-hidden="true"></div>
-  <div class="smoke" aria-hidden="true"></div>
-  <div class="smoke-2" aria-hidden="true"></div>
-  <div class="smoke-3" aria-hidden="true"></div>
-  <div class="container">
-    <div class="kicker">Flame-grilled · Open daily</div>
-    <h1>Good food, cooked<br>over real fire.</h1>
-    <p>Fresh meat, honest ingredients and a grill that never stops. Come hungry, leave happy.</p>
-    <div class="btns">
-      <a class="btn" href="#contact">Book a Table</a>
-      <a class="btn ghost" href="#menu">View Menu</a>
+  <header id="hd" aria-label="Primary site header">
+    <div class="container nav">
+      <a class="logo" href="#top" aria-label="Ember Grill Rochdale home">Ember<b>.</b>Grill</a>
+      <button class="burger" id="bg" aria-label="Open navigation menu">&#9776;</button>
+      <nav class="links" id="lk" aria-label="Main navigation">
+        <a href="#about" aria-label="About Ember Grill Rochdale">About</a>
+        <a href="#signature" aria-label="Signature dishes at Ember Grill Rochdale">Favourites</a>
+        <a href="#menu" aria-label="Menu at Ember Grill Rochdale">Menu</a>
+        <a href="#gallery" aria-label="Gallery for Ember Grill Rochdale">Gallery</a>
+        <a href="#contact" aria-label="Contact Ember Grill Rochdale">Contact</a>
+        <a class="btn" href="#contact" aria-label="Book a table at Ember Grill Rochdale">Book a Table</a>
+      </nav>
     </div>
-  </div>
-</section>
+  </header>
 
-<div class="info">
-  <div class="container">
-    <div class="reveal delay-1"><small>Open</small>Every day · 12:00 pm – 11:00 pm</div>
-    <div class="reveal delay-2"><small>Call</small>(000) 000-0000</div>
-    <div class="reveal delay-3"><small>Find us</small>123 Main Street, Your City</div>
-  </div>
-</div>
+  <main id="main" role="main">
+    <section class="hero reveal" id="top" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="smoke" aria-hidden="true"></div>
+      <div class="smoke-2" aria-hidden="true"></div>
+      <div class="smoke-3" aria-hidden="true"></div>
+      <div class="container">
+        <div class="kicker" aria-label="Ember Grill Rochdale opening details">Flame-grilled · Open daily</div>
+        <h1 id="hero-title">Ember Grill Rochdale — Flame-Grilled Cuisine</h1>
+        <p>Fresh flame-grilled favourites, handcrafted burgers, and charcoal kebabs served in Rochdale. Book a table or drop in for lunch or dinner.</p>
+        <div class="btns" aria-label="Primary call to action buttons">
+          <a class="btn" href="#contact" aria-label="Reserve a table at Ember Grill Rochdale">Book a Table</a>
+          <a class="btn ghost" href="#menu" aria-label="View Ember Grill Rochdale menu">View Menu</a>
+        </div>
+      </div>
+    </section>
 
-<section class="about reveal" id="about">
-  <div class="container about-grid">
-    <img class="reveal delay-1" src="https://images.pexels.com/photos/27668701/pexels-photo-27668701.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Meat and vegetables on the grill" loading="lazy">
-    <div class="reveal delay-2">
-      <div class="kicker">Our story</div>
-      <h2>Simple food, done properly.</h2>
-      <p>We started with one grill and a short menu. The idea was simple: buy fresh, season well, and cook everything over charcoal.</p>
-      <p>That's still how we do it today. No shortcuts, no frozen meat, just a warm table and food made to share.</p>
-      <div class="stats">
-        <div><strong>15+</strong><span>Years cooking</span></div>
-        <div><strong>100%</strong><span>Fresh daily</span></div>
-        <div><strong>4.8</strong><span>Guest rating</span></div>
+    <div class="info" aria-label="Restaurant details">
+      <div class="container">
+        <div class="reveal delay-1"><small>Open</small>Every day · 12:00 pm – 11:00 pm</div>
+        <div class="reveal delay-2"><small>Call</small>(01706) 123456</div>
+        <div class="reveal delay-3"><small>Find us</small>Rochdale, Greater Manchester, UK</div>
       </div>
     </div>
-  </div>
-</section>
 
-<section class="sig reveal" id="signature">
-  <div class="container center">
-    <div class="kicker">Favourites</div>
-    <h2>What everyone orders</h2>
-    <p class="sub">Three plates our regulars keep coming back for.</p>
-    <div class="cards" style="text-align:left">
-      <div class="card reveal delay-1">
-        <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Shish kebab with peppers" loading="lazy">
-        <div><h3>Mixed Kebab Platter <span>$18</span></h3><p>Beef and chicken skewers with grilled peppers, onion and house sauce.</p></div>
+    <section class="about reveal" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <img class="reveal delay-1" src="https://images.pexels.com/photos/27668701/pexels-photo-27668701.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Ember Grill Rochdale flame-grilled meats and vegetables on the charcoal grill" width="1200" height="800" loading="lazy">
+        <div class="reveal delay-2">
+          <div class="kicker">Our story</div>
+          <h2 id="about-title">Simple food, done properly.</h2>
+          <p>We started with one grill and a short menu. The idea was simple: buy fresh, season well, and cook everything over charcoal.</p>
+          <p>That's still how we do it today. No shortcuts, no frozen meat, just a warm table and food made to share in Rochdale.</p>
+          <div class="stats" aria-label="Restaurant highlights">
+            <div><strong>15+</strong><span>Years cooking</span></div>
+            <div><strong>100%</strong><span>Fresh daily</span></div>
+            <div><strong>4.8</strong><span>Guest rating</span></div>
+          </div>
+        </div>
       </div>
-      <div class="card reveal delay-2">
-        <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Roasted skewers" loading="lazy">
-        <div><h3>Charcoal Lamb Skewers <span>$21</span></h3><p>Marinated overnight and grilled to order. Served with warm bread.</p></div>
+    </section>
+
+    <section class="sig reveal" id="signature" aria-labelledby="signature-title">
+      <div class="container center">
+        <div class="kicker">Favourites</div>
+        <h2 id="signature-title">What everyone orders</h2>
+        <p class="sub">Three plates our regulars keep coming back for at Ember Grill Rochdale.</p>
+        <div class="cards" style="text-align:left" aria-label="Popular menu items">
+          <article class="card reveal delay-1" aria-label="Mixed Kebab Platter">
+            <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Mixed kebab platter with grilled peppers and chicken skewers at Ember Grill Rochdale" width="900" height="700" loading="lazy">
+            <div>
+              <h3>Mixed Kebab Platter <span>£18</span></h3>
+              <p>Beef and chicken skewers with grilled peppers, onion and house sauce.</p>
+            </div>
+          </article>
+          <article class="card reveal delay-2" aria-label="Charcoal Lamb Skewers">
+            <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Charcoal lamb skewers served with warm bread at Ember Grill Rochdale" width="900" height="700" loading="lazy">
+            <div>
+              <h3>Charcoal Lamb Skewers <span>£21</span></h3>
+              <p>Marinated overnight and grilled to order. Served with warm bread.</p>
+            </div>
+          </article>
+          <article class="card reveal delay-3" aria-label="Chicken and Pepper Grill">
+            <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Chicken and pepper grill at Ember Grill Rochdale" width="900" height="700" loading="lazy">
+            <div>
+              <h3>Chicken &amp; Pepper Grill <span>£16</span></h3>
+              <p>Juicy chicken pieces with smoky peppers and a squeeze of lemon.</p>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="card reveal delay-3">
-        <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Grilled chicken and pepper skewers" loading="lazy">
-        <div><h3>Chicken &amp; Pepper Grill <span>$16</span></h3><p>Juicy chicken pieces with smoky peppers and a squeeze of lemon.</p></div>
+    </section>
+
+    <section id="menu" class="reveal" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="center reveal delay-1">
+          <div class="kicker">The menu</div>
+          <h2 id="menu-title">Something for every appetite</h2>
+          <p class="sub">Everything is made fresh each day. Tell us about any allergies when you order.</p>
+        </div>
+        <div class="tabs reveal delay-2" id="tabs" aria-label="Menu categories">
+          <button class="on" data-f="all" aria-label="View all menu items">All</button>
+          <button data-f="start" aria-label="View starters">Starters</button>
+          <button data-f="grill" aria-label="View grill menu">Grill</button>
+          <button data-f="side" aria-label="View sides menu">Sides</button>
+          <button data-f="drink" aria-label="View drinks and desserts">Drinks &amp; Dessert</button>
+        </div>
+        <div class="list reveal delay-3" aria-label="Ember Grill Rochdale menu list">
+          <article class="item" data-c="start" aria-label="Hummus and warm bread menu item">
+            <img src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Hummus and warm bread starter served at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Hummus &amp; Warm Bread</h3><span class="p">£7</span></div><p>Creamy chickpea dip with olive oil and paprika.</p></div>
+          </article>
+          <article class="item" data-c="start" aria-label="Crispy Chicken Wings menu item">
+            <img src="https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Crispy chicken wings starter at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Crispy Chicken Wings</h3><span class="p">£9</span></div><p>Tossed in our smoky house glaze.</p></div>
+          </article>
+          <article class="item" data-c="start" aria-label="Soup of the day menu item">
+            <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Soup of the day at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Soup of the Day</h3><span class="p">£6</span></div><p>Ask your server for today's pot.</p></div>
+          </article>
+          <article class="item" data-c="start" aria-label="Garden salad menu item">
+            <img src="https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Garden salad at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Garden Salad</h3><span class="p">£7</span></div><p>Crisp greens, tomato, cucumber, lemon dressing.</p></div>
+          </article>
+          <article class="item" data-c="grill" aria-label="Mixed Kebab Platter menu item">
+            <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Mixed Kebab Platter flame-grilled at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Mixed Kebab Platter</h3><span class="p">£18</span></div><p>Beef and chicken skewers, grilled peppers, sauce.</p></div>
+          </article>
+          <article class="item" data-c="grill" aria-label="Charcoal Lamb Skewers menu item">
+            <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Charcoal Lamb Skewers at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Charcoal Lamb Skewers</h3><span class="p">£21</span></div><p>Marinated overnight, served with bread.</p></div>
+          </article>
+          <article class="item" data-c="grill" aria-label="Chicken and Pepper Grill menu item">
+            <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Chicken and pepper grill at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Chicken &amp; Pepper Grill</h3><span class="p">£16</span></div><p>Grilled chicken, peppers and lemon.</p></div>
+          </article>
+          <article class="item" data-c="grill" aria-label="Ribeye Steak menu item">
+            <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Ribeye steak flame grilled at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Ribeye Steak</h3><span class="p">£29</span></div><p>300g, flame-grilled to your liking, with butter.</p></div>
+          </article>
+          <article class="item" data-c="grill" aria-label="Family Grill Feast menu item">
+            <img src="https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Family Grill Feast at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Family Grill Feast</h3><span class="p">£64</span></div><p>Mixed grill for four with sides and bread.</p></div>
+          </article>
+          <article class="item" data-c="grill" aria-label="Smash Burger menu item">
+            <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Smash burger from Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Smash Burger</h3><span class="p">£14</span></div><p>Double beef, cheese, pickles, house sauce, fries.</p></div>
+          </article>
+          <article class="item" data-c="side" aria-label="Steamed rice menu item">
+            <img src="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Steamed rice side dish served at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Steamed Rice</h3><span class="p">£4</span></div><p>Fragrant long-grain rice.</p></div>
+          </article>
+          <article class="item" data-c="side" aria-label="Skin-on fries menu item">
+            <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Skin-on fries side dish at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Skin-on Fries</h3><span class="p">£5</span></div><p>Crisp, salted, with dipping sauce.</p></div>
+          </article>
+          <article class="item" data-c="side" aria-label="Grilled vegetables menu item">
+            <img src="https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Grilled vegetables side dish at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Grilled Vegetables</h3><span class="p">£6</span></div><p>Seasonal vegetables off the coals.</p></div>
+          </article>
+          <article class="item" data-c="side" aria-label="Fresh bread menu item">
+            <img src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Fresh bread served at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Fresh Bread</h3><span class="p">£3</span></div><p>Baked in-house all day.</p></div>
+          </article>
+          <article class="item" data-c="drink" aria-label="Fresh lemonade menu item">
+            <img src="https://images.pexels.com/photos/2103949/pexels-photo-2103949.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Fresh lemonade drink at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Fresh Lemonade</h3><span class="p">£4</span></div><p>Squeezed to order, with mint.</p></div>
+          </article>
+          <article class="item" data-c="drink" aria-label="Hot tea menu item">
+            <img src="https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Hot tea drink at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Hot Tea</h3><span class="p">£3</span></div><p>Black or green, served in a pot.</p></div>
+          </article>
+          <article class="item" data-c="drink" aria-label="Chocolate brownie menu item">
+            <img src="https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Chocolate brownie dessert at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Chocolate Brownie</h3><span class="p">£7</span></div><p>Warm, with vanilla ice cream.</p></div>
+          </article>
+          <article class="item" data-c="drink" aria-label="Ice cream cup menu item">
+            <img src="https://images.pexels.com/photos/1352274/pexels-photo-1352274.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Ice cream cup dessert at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <div class="content"><div class="top"><h3>Ice Cream Cup</h3><span class="p">£5</span></div><p>Vanilla, chocolate or strawberry.</p></div>
+          </article>
+        </div>
       </div>
+    </section>
+
+    <section class="gal reveal" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="center reveal delay-1">
+          <div class="kicker">Gallery</div>
+          <h2 id="gallery-title">Straight from the grill</h2>
+          <p class="sub" style="color:#bdb4a6">A look at what's cooking at Ember Grill Rochdale.</p>
+        </div>
+        <div class="grid reveal delay-2" aria-label="Ember Grill Rochdale gallery">
+          <img src="assets/pexels-thomas-chauke-437438-32351197.jpg" alt="Charcoal grill and flame-grilled meal at Ember Grill Rochdale" width="800" height="600" loading="lazy">
+          <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="Mixed kebab platter at Ember Grill Rochdale" width="800" height="600" loading="lazy">
+          <img src="https://images.pexels.com/photos/27668701/pexels-photo-27668701.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="Grill with vegetables and meats at Ember Grill Rochdale" width="800" height="600" loading="lazy">
+          <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="Roasted skewers at Ember Grill Rochdale" width="800" height="600" loading="lazy">
+          <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="Chicken skewers and peppers at Ember Grill Rochdale" width="800" height="600" loading="lazy">
+          <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=800&h=600" alt="Ribeye steak plate at Ember Grill Rochdale" width="800" height="600" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact reveal" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="reveal delay-1">
+          <div class="kicker">Visit us</div>
+          <h3 id="contact-title">Opening hours</h3>
+          <div class="row"><b>Monday – Thursday</b><span>12:00 pm – 11:00 pm</span></div>
+          <div class="row"><b>Friday – Saturday</b><span>12:00 pm – 12:00 am</span></div>
+          <div class="row"><b>Sunday</b><span>12:00 pm – 10:00 pm</span></div>
+          <p><b>Address:</b> Rochdale, Greater Manchester, UK<br><b>Phone:</b> (01706) 123456<br><b>Email:</b> hello@embergrillrochdale.co.uk</p>
+        </div>
+        <form id="rf" autocomplete="off" class="reveal delay-2" aria-label="Book a table form">
+          <h3 style="margin-bottom:20px">Book a table</h3>
+          <label for="n">Full name</label><input id="n" required aria-label="Full name">
+          <div class="f2">
+            <div><label for="ph">Phone</label><input id="ph" type="tel" required aria-label="Phone number"></div>
+            <div><label for="g">Guests</label><select id="g" aria-label="Number of guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></div>
+          </div>
+          <div class="f2">
+            <div><label for="d">Date</label><input id="d" type="date" required aria-label="Booking date"></div>
+            <div><label for="t">Time</label><select id="t" aria-label="Booking time"><option>6:00 pm</option><option>7:00 pm</option><option>8:00 pm</option><option>9:00 pm</option></select></div>
+          </div>
+          <button class="btn" type="submit" aria-label="Confirm booking">Confirm Booking</button>
+          <div id="ok" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Footer">
+    <div class="container">
+      <a class="logo" href="#top" aria-label="Back to Ember Grill Rochdale home">Ember<b>.</b>Grill</a>
+      © 2026 Ember Grill Rochdale. Demo website.
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="menu" class="reveal">
-  <div class="container">
-    <div class="center reveal delay-1">
-      <div class="kicker">The menu</div>
-      <h2>Something for every appetite</h2>
-      <p class="sub">Everything is made fresh each day. Tell us about any allergies when you order.</p>
-    </div>
-    <div class="tabs reveal delay-2" id="tabs">
-      <button class="on" data-f="all">All</button>
-      <button data-f="start">Starters</button>
-      <button data-f="grill">Grill</button>
-      <button data-f="side">Sides</button>
-      <button data-f="drink">Drinks &amp; Dessert</button>
-    </div>
-    <div class="list reveal delay-3">
-      <!-- Starters -->
-      <div class="item" data-c="start">
-        <img src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Hummus" loading="lazy">
-        <div class="content"><div class="top"><h3>Hummus &amp; Warm Bread</h3><span class="p">$7</span></div><p>Creamy chickpea dip with olive oil and paprika.</p></div>
-      </div>
-      <div class="item" data-c="start">
-        <img src="https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chicken Wings" loading="lazy">
-        <div class="content"><div class="top"><h3>Crispy Chicken Wings</h3><span class="p">$9</span></div><p>Tossed in our smoky house glaze.</p></div>
-      </div>
-      <div class="item" data-c="start">
-        <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Soup" loading="lazy">
-        <div class="content"><div class="top"><h3>Soup of the Day</h3><span class="p">$6</span></div><p>Ask your server for today's pot.</p></div>
-      </div>
-      <div class="item" data-c="start">
-        <img src="https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Salad" loading="lazy">
-        <div class="content"><div class="top"><h3>Garden Salad</h3><span class="p">$7</span></div><p>Crisp greens, tomato, cucumber, lemon dressing.</p></div>
-      </div>
-
-      <!-- Grill -->
-      <div class="item" data-c="grill">
-        <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Mixed Kebab" loading="lazy">
-        <div class="content"><div class="top"><h3>Mixed Kebab Platter</h3><span class="p">$18</span></div><p>Beef and chicken skewers, grilled peppers, sauce.</p></div>
-      </div>
-      <div class="item" data-c="grill">
-        <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lamb Skewers" loading="lazy">
-        <div class="content"><div class="top"><h3>Charcoal Lamb Skewers</h3><span class="p">$21</span></div><p>Marinated overnight, served with bread.</p></div>
-      </div>
-      <div class="item" data-c="grill">
-        <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Chicken Grill" loading="lazy">
-        <div class="content"><div class="top"><h3>Chicken &amp; Pepper Grill</h3><span class="p">$16</span></div><p>Grilled chicken, peppers and lemon.</p></div>
-      </div>
-      <div class="item" data-c="grill">
-        <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Steak" loading="lazy">
-        <div class="content"><div class="top"><h3>Ribeye Steak</h3><span class="p">$29</span></div><p>300g, flame-grilled to your liking, with butter.</p></div>
-      </div>
-      <div class="item" data-c="grill">
-        <img src="https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Family Feast" loading="lazy">
-        <div class="content"><div class="top"><h3>Family Grill Feast</h3><span class="p">$64</span></div><p>Mixed grill for four with sides and bread.</p></div>
-      </div>
-      <div class="item" data-c="grill">
-        <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Burger" loading="lazy">
-        <div class="content"><div class="top"><h3>Smash Burger</h3><span class="p">$14</span></div><p>Double beef, cheese, pickles, house sauce, fries.</p></div>
-      </div>
-
-      <!-- Sides -->
-      <div class="item" data-c="side">
-        <img src="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Rice" loading="lazy">
-        <div class="content"><div class="top"><h3>Steamed Rice</h3><span class="p">$4</span></div><p>Fragrant long-grain rice.</p></div>
-      </div>
-      <div class="item" data-c="side">
-        <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Fries" loading="lazy">
-        <div class="content"><div class="top"><h3>Skin-on Fries</h3><span class="p">$5</span></div><p>Crisp, salted, with dipping sauce.</p></div>
-      </div>
-      <div class="item" data-c="side">
-        <img src="https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Grilled Vegetables" loading="lazy">
-        <div class="content"><div class="top"><h3>Grilled Vegetables</h3><span class="p">$6</span></div><p>Seasonal vegetables off the coals.</p></div>
-      </div>
-      <div class="item" data-c="side">
-        <img src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bread" loading="lazy">
-        <div class="content"><div class="top"><h3>Fresh Bread</h3><span class="p">$3</span></div><p>Baked in-house all day.</p></div>
-      </div>
-
-      <!-- Drinks & Dessert -->
-      <div class="item" data-c="drink">
-        <img src="https://images.pexels.com/photos/2103949/pexels-photo-2103949.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Lemonade" loading="lazy">
-        <div class="content"><div class="top"><h3>Fresh Lemonade</h3><span class="p">$4</span></div><p>Squeezed to order, with mint.</p></div>
-      </div>
-      <div class="item" data-c="drink">
-        <img src="https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Tea" loading="lazy">
-        <div class="content"><div class="top"><h3>Hot Tea</h3><span class="p">$3</span></div><p>Black or green, served in a pot.</p></div>
-      </div>
-      <div class="item" data-c="drink">
-        <img src="https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Brownie" loading="lazy">
-        <div class="content"><div class="top"><h3>Chocolate Brownie</h3><span class="p">$7</span></div><p>Warm, with vanilla ice cream.</p></div>
-      </div>
-      <div class="item" data-c="drink">
-        <img src="https://images.pexels.com/photos/1352274/pexels-photo-1352274.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Ice Cream" loading="lazy">
-        <div class="content"><div class="top"><h3>Ice Cream Cup</h3><span class="p">$5</span></div><p>Vanilla, chocolate or strawberry.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="gal reveal" id="gallery">
-  <div class="container">
-    <div class="center reveal delay-1">
-      <div class="kicker">Gallery</div>
-      <h2>Straight from the grill</h2>
-      <p class="sub" style="color:#bdb4a6">A look at what's cooking.</p>
-    </div>
-    <div class="grid reveal delay-2">
-      <img src="assets/pexels-thomas-chauke-437438-32351197.jpg" alt="Flame-grilled meat" loading="lazy">
-      <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Shish kebab" loading="lazy">
-      <img src="https://images.pexels.com/photos/27668701/pexels-photo-27668701.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Grill with vegetables" loading="lazy">
-      <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Roasting skewers" loading="lazy">
-      <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Chicken skewers" loading="lazy">
-      <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Steak plate" loading="lazy">
-    </div>
-  </div>
-</section>
-
-<section class="contact reveal" id="contact">
-  <div class="container contact-grid">
-    <div class="reveal delay-1">
-      <div class="kicker">Visit us</div>
-      <h3>Opening hours</h3>
-      <div class="row"><b>Monday – Thursday</b><span>12:00 pm – 11:00 pm</span></div>
-      <div class="row"><b>Friday – Saturday</b><span>12:00 pm – 12:00 am</span></div>
-      <div class="row"><b>Sunday</b><span>12:00 pm – 10:00 pm</span></div>
-      <p><b>Address:</b> 123 Main Street, Your City<br><b>Phone:</b> (000) 000-0000<br><b>Email:</b> hello@embergrill.example</p>
-    </div>
-    <form id="rf" autocomplete="off" class="reveal delay-2">
-      <h3 style="margin-bottom:20px">Book a table</h3>
-      <label for="n">Full name</label><input id="n" required>
-      <div class="f2">
-        <div><label for="ph">Phone</label><input id="ph" type="tel" required></div>
-        <div><label for="g">Guests</label><select id="g"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></div>
-      </div>
-      <div class="f2">
-        <div><label for="d">Date</label><input id="d" type="date" required></div>
-        <div><label for="t">Time</label><select id="t"><option>6:00 pm</option><option>7:00 pm</option><option>8:00 pm</option><option>9:00 pm</option></select></div>
-      </div>
-      <button class="btn" type="submit">Confirm Booking</button>
-      <div id="ok" role="status"></div>
-    </form>
-  </div>
-</section>
-</main>
-
-<footer>
-  <div class="container">
-    <a class="logo" href="#top">Ember<b>.</b>Grill</a>
-    © 2026 Ember Grill. Demo website.
-  </div>
-</footer>
-
-<script>
-  window.addEventListener('load', function(){
-    document.body.classList.add('ready');
-  });
-
-  var hd=document.getElementById('hd'),lk=document.getElementById('lk');
-  function sc(){hd.classList.toggle('solid',window.scrollY>40)}sc();window.addEventListener('scroll',sc);
-  document.getElementById('bg').onclick=function(){lk.classList.toggle('open');hd.classList.add('solid')};
-  lk.querySelectorAll('a').forEach(function(a){a.onclick=function(){lk.classList.remove('open')}});
-
-  var heroMedia=document.querySelector('.hero-media');
-  function updateHeroParallax(){
-    if (!heroMedia) return;
-    var offset=window.scrollY * 0.18;
-    heroMedia.style.transform='scale(1.14) translateY(' + offset + 'px)';
-  }
-  updateHeroParallax();
-  window.addEventListener('scroll', updateHeroParallax, {passive:true});
-
-  function addRevealObserver(){
-    var items=document.querySelectorAll('.reveal');
-    if(!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in-view')});return;}
-    var observer=new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
-        }
-      });
-    },{threshold:0.15, rootMargin:'0px 0px -8% 0px'});
-    items.forEach(function(item){observer.observe(item)});
-  }
-  addRevealObserver();
-
-  function tone(freq, duration, type, gainValue){
-    var AudioCtx=window.AudioContext||window.webkitAudioContext;
-    if(!AudioCtx) return;
-    var ctx=new AudioCtx();
-    var osc=ctx.createOscillator();
-    var gain=ctx.createGain();
-    osc.type=type || 'triangle';
-    osc.frequency.value=freq || 440;
-    gain.gain.value=gainValue || 0.03;
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    osc.start();
-    gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + (duration || 0.12));
-    osc.stop(ctx.currentTime + (duration || 0.12));
-  }
-
-  var interactiveItems=document.querySelectorAll('.btn, .tabs button, .card, .item, .grid img, .about img, .links a, .logo');
-  interactiveItems.forEach(function(el){
-    el.addEventListener('pointerenter', function(){
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      tone(540, 0.08, 'triangle', 0.018);
-    }, {passive:true});
-    el.addEventListener('click', function(){
-      tone(660, 0.09, 'sine', 0.018);
-      setTimeout(function(){tone(820,0.08,'triangle',0.015);},80);
+  <script>
+    window.addEventListener('load', function(){
+      document.body.classList.add('ready');
     });
-  });
 
-  var tb=document.querySelectorAll('#tabs button'),it=document.querySelectorAll('.item');
-  tb.forEach(function(b){b.onclick=function(){
-    tb.forEach(function(x){x.classList.remove('on')});b.classList.add('on');
-    it.forEach(function(i){i.classList.toggle('hide',b.dataset.f!=='all'&&i.dataset.c!==b.dataset.f)});
-    tone(500,0.08,'square',0.02);
-  }});
+    var hd=document.getElementById('hd'),lk=document.getElementById('lk');
+    function sc(){hd.classList.toggle('solid',window.scrollY>40)}sc();window.addEventListener('scroll',sc);
+    document.getElementById('bg').onclick=function(){lk.classList.toggle('open');hd.classList.add('solid')};
+    lk.querySelectorAll('a').forEach(function(a){a.onclick=function(){lk.classList.remove('open')}});
 
-  var d=document.getElementById('d');d.min=new Date().toISOString().split('T')[0];
-  document.getElementById('rf').onsubmit=function(e){
-    e.preventDefault();var o=document.getElementById('ok');o.style.display='block';
-    o.textContent='Thanks '+document.getElementById('n').value.split(' ')[0]+'! Your table for '+document.getElementById('g').value+' on '+d.value+' at '+document.getElementById('t').value+' is confirmed.';
-    tone(520,0.14,'triangle',0.03);setTimeout(function(){tone(760,0.12,'sine',0.025);},90);
-    this.reset();d.min=new Date().toISOString().split('T')[0];
-  };
-</script>
+    var heroMedia=document.querySelector('.hero-media');
+    function updateHeroParallax(){
+      if (!heroMedia) return;
+      var offset=window.scrollY * 0.18;
+      heroMedia.style.transform='scale(1.14) translateY(' + offset + 'px)';
+    }
+    updateHeroParallax();
+    window.addEventListener('scroll', updateHeroParallax, {passive:true});
 
-<!-- Structured data (Restaurant) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Restaurant",
-  "name": "Ember Grill",
-  "url": "https://arifkhan15175-ops.github.io/Ember-Grill-demo/",
-  "description": "Flame-grilled meats, fresh sides and a warm table. Open daily.",
-  "telephone": "(000) 000-0000",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Main Street",
-    "addressLocality": "Your City"
-  },
-  "openingHours": [
-    "Mo-Th 12:00-23:00",
-    "Fr-Sa 12:00-24:00",
-    "Su 12:00-22:00"
-  ]
-}
-</script>
+    function addRevealObserver(){
+      var items=document.querySelectorAll('.reveal');
+      if(!('IntersectionObserver' in window)){items.forEach(function(el){el.classList.add('in-view')});return;}
+      var observer=new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      },{threshold:0.15, rootMargin:'0px 0px -8% 0px'});
+      items.forEach(function(item){observer.observe(item)});
+    }
+    addRevealObserver();
 
+    function tone(freq, duration, type, gainValue){
+      var AudioCtx=window.AudioContext||window.webkitAudioContext;
+      if(!AudioCtx) return;
+      var ctx=new AudioCtx();
+      var osc=ctx.createOscillator();
+      var gain=ctx.createGain();
+      osc.type=type || 'triangle';
+      osc.frequency.value=freq || 440;
+      gain.gain.value=gainValue || 0.03;
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+      gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + (duration || 0.12));
+      osc.stop(ctx.currentTime + (duration || 0.12));
+    }
+
+    var interactiveItems=document.querySelectorAll('.btn, .tabs button, .card, .item, .grid img, .about img, .links a, .logo');
+    interactiveItems.forEach(function(el){
+      el.addEventListener('pointerenter', function(){
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        tone(540, 0.08, 'triangle', 0.018);
+      }, {passive:true});
+      el.addEventListener('click', function(){
+        tone(660, 0.09, 'sine', 0.018);
+        setTimeout(function(){tone(820,0.08,'triangle',0.015);},80);
+      });
+    });
+
+    var tb=document.querySelectorAll('#tabs button'),it=document.querySelectorAll('.item');
+    tb.forEach(function(b){b.onclick=function(){
+      tb.forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+      it.forEach(function(i){i.classList.toggle('hide',b.dataset.f!=='all'&&i.dataset.c!==b.dataset.f)});
+      tone(500,0.08,'square',0.02);
+    }});
+
+    var d=document.getElementById('d');d.min=new Date().toISOString().split('T')[0];
+    document.getElementById('rf').onsubmit=function(e){
+      e.preventDefault();var o=document.getElementById('ok');o.style.display='block';
+      o.textContent='Thanks '+document.getElementById('n').value.split(' ')[0]+'! Your table for '+document.getElementById('g').value+' on '+d.value+' at '+document.getElementById('t').value+' is confirmed.';
+      tone(520,0.14,'triangle',0.03);setTimeout(function(){tone(760,0.12,'sine',0.025);},90);
+      this.reset();d.min=new Date().toISOString().split('T')[0];
+    };
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Ember Grill Rochdale",
+      "legalName": "Ember Grill Rochdale",
+      "url": "https://arifkhan15175-ops.github.io/Ember-Grill-demo/",
+      "image": [
+        "https://arifkhan15175-ops.github.io/Ember-Grill-demo/assets/pexels-thomas-chauke-437438-32351197.jpg",
+        "https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800"
+      ],
+      "description": "Ember Grill in Rochdale serves flame-grilled burgers, charcoal kebabs, and platters. View menu and book online.",
+      "telephone": "+44 1706 123456",
+      "priceRange": "££",
+      "currenciesAccepted": "GBP",
+      "acceptsReservations": true,
+      "servesCuisine": ["Flame-Grilled", "Charcoal Kebabs", "Burgers"],
+      "cuisine": ["Flame-Grilled", "Charcoal Kebabs", "Burgers"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rochdale Town Centre",
+        "addressLocality": "Rochdale",
+        "addressRegion": "Greater Manchester",
+        "postalCode": "OL11 1AA",
+        "addressCountry": "GB"
+      },
+      "areaServed": "Rochdale, Greater Manchester, UK",
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "53.6134",
+        "longitude": "-2.1561"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "hasMenu": [
+        {
+          "@type": "Menu",
+          "name": "Ember Grill Rochdale Signature Menu",
+          "hasMenuSection": [
+            {
+              "@type": "MenuSection",
+              "name": "Grill Specialities",
+              "hasMenuItem": [
+                {
+                  "@type": "MenuItem",
+                  "name": "Mixed Kebab Platter",
+                  "description": "Beef and chicken skewers with grilled peppers, onion and house sauce.",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "18.00",
+                    "priceCurrency": "GBP"
+                  }
+                },
+                {
+                  "@type": "MenuItem",
+                  "name": "Charcoal Lamb Skewers",
+                  "description": "Marinated overnight and grilled to order. Served with warm bread.",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "21.00",
+                    "priceCurrency": "GBP"
+                  }
+                },
+                {
+                  "@type": "MenuItem",
+                  "name": "Smash Burger",
+                  "description": "Double beef burger with cheese, pickles, house sauce and fries.",
+                  "offers": {
+                    "@type": "Offer",
+                    "price": "14.00",
+                    "priceCurrency": "GBP"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sameAs": [
+        "https://arifkhan15175-ops.github.io/Ember-Grill-demo/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "128"
+      }
+    }
+  </script>
 </body>
 </html>
