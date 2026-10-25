@@ -4,7 +4,8 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6P27YYXG2"></script>
 <script>
-  window.dataLayer = window.dataLayer || function(){dataLayer.push(arguments);};
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-C6P27YYXG2');
@@ -42,10 +43,10 @@
   <meta name="twitter:image" content="https://arifkhan15175-ops.github.io/Ember-Grill-demo/assets/pexels-thomas-chauke-437438-32351197.jpg">
 
   <style>
-    :root{--dark:#181512;--dark2:#241f1a;--cream:#faf6ef;--sand:#efe7d8;--accent:#bc4316;--accent-d:#9e360f;--text:#2b2621;--muted:#6d655b;--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--shadow:0 20px 42px rgba(28,20,15,.12)}
+    :root{--dark:#181512;--dark2:#241f1a;--cream:#faf6ef;--sand:#efe7d8;--accent:#bc4316;--accent-d:#9e360f;--text:#2b2621;--muted:#6d655b;--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--shadow:0 18px 42px rgba(22,15,11,.18)}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:var(--body);color:var(--text);background:linear-gradient(180deg,#f8f1e8 0%,#f5efe8 35%,#f4efe8 100%);line-height:1.65;font-size:16px;overflow-x:hidden;opacity:0;transition:opacity .5s ease}
+    body{font-family:var(--body);color:var(--text);background:linear-gradient(180deg,#f8f1e8 0%,#f5efe8 35%,#f4efe8 100%);line-height:1.65;font-size:16px;overflow-x:hidden;opacity:0;transition:opacity .35s ease}
     body.ready{opacity:1}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
@@ -55,7 +56,7 @@
     h2{font-family:var(--head);font-size:clamp(30px,4vw,44px);line-height:1.15;color:var(--dark);margin-bottom:16px}
     .center{text-align:center}
     .sub{max-width:580px;color:var(--muted);margin:0 auto 46px}
-    .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body);position:relative;overflow:hidden;transition:transform .2s ease, box-shadow .2s ease, background-color .2s ease, border-color .2s ease}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body);position:relative;overflow:hidden;transition:transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease}
     .btn::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.25),transparent 80%);transform:translateX(-120%);transition:transform .7s ease}
     .btn:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 20px 34px rgba(188,67,22,.28);background:var(--accent-d);border-color:var(--accent-d)}
     .btn:hover::before{transform:translateX(120%)}
@@ -78,10 +79,10 @@
     .links .btn{padding:10px 22px;color:#fff}
     .burger{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
     .hero{position:relative;min-height:100vh;display:flex;align-items:center;text-align:center;color:#fff;padding:120px 0 80px;overflow:hidden;isolation:isolate}
-    .hero-media{position:absolute;inset:0;background:url("assets/pexels-thomas-chauke-437438-32351197.jpg") center center / cover no-repeat;transform:scale(1.12) translateY(0);will-change:transform;transition:transform 0.2s linear;filter:saturate(1.05) contrast(1.08)}
+    .hero-media{position:absolute;inset:0;background:url("assets/pexels-thomas-chauke-437438-32351197.jpg") center center / cover no-repeat;transform:scale(1.12) translateY(0);will-change:transform}
     .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,12,9,.72),rgba(15,12,9,.55),rgba(15,12,9,.7));z-index:1}
-    .hero::after{content:"";position:absolute;inset:-20% auto auto -10%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(255,146,63,.32), rgba(255,146,63,0) 72%);filter:blur(12px);z-index:1}
-    .hero .smoke,.hero .smoke-2,.hero .smoke-3{position:absolute;inset:auto auto -24% -8%;width:62vw;max-width:780px;height:62vw;max-height:780px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,.12) 0%, rgba(255,255,255,.05) 18%, rgba(255,255,255,0) 70%);filter:blur(28px);opacity:.9;z-index:1;pointer-events:none;animation:smokeDrift 18s ease-in-out infinite alternate}
+    .hero::after{content:"";position:absolute;inset:-20% auto auto -10%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(255,146,63,.32), rgba(255,146,63,0) 72%);filter:blur(16px);z-index:0}
+    .hero .smoke,.hero .smoke-2,.hero .smoke-3{position:absolute;inset:auto auto -24% -8%;width:62vw;max-width:780px;height:62vw;max-height:780px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,.18), rgba(255,255,255,0) 62%);animation:smokeDrift 15s ease-in-out infinite alternate;opacity:.54;z-index:1}
     .hero .smoke-2{left:auto;right:-8%;bottom:-18%;animation-delay:4s}
     .hero .smoke-3{left:30%;right:auto;bottom:-26%;width:48vw;max-width:640px;height:48vw;max-height:640px;animation-delay:8s}
     .hero .container{position:relative;z-index:2}
@@ -114,12 +115,12 @@
     .card h3 span{color:var(--accent)}
     .card p{color:var(--muted);font-size:15px}
     .tabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:40px}
-    .tabs button{background:none;border:2px solid #d8cfbf;padding:10px 22px;border-radius:30px;font:600 14px var(--body);cursor:pointer;color:var(--text);transition:all .28s cubic-bezier(.2,.7,.2,1);position:relative;overflow:hidden;}
+    .tabs button{background:none;border:2px solid #d8cfbf;padding:10px 22px;border-radius:30px;font:600 14px var(--body);cursor:pointer;color:var(--text);transition:all .28s cubic-bezier(.2,.7,.2,1);position:relative;overflow:hidden}
     .tabs button::before{content:"";position:absolute;inset:0;background:rgba(255,255,255,.08);transform:translateX(-100%);transition:transform .28s ease}
     .tabs button:hover::before{transform:translateX(100%)}
     .tabs button.on,.tabs button:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-1px) scale(1.02)}
     .list{display:grid;grid-template-columns:1fr 1fr;gap:20px 40px}
-    .item{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid #e3dac9;opacity:1;transform:translateY(0);transition:transform .22s ease, opacity .22s ease, filter .22s ease, max-height .22s ease, padding .22s ease}
+    .item{display:flex;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid #e3dac9;opacity:1;transform:translateY(0);transition:transform .22s ease, opacity .22s ease, filter .22s ease}
     .item:hover{transform:translateX(4px)}
     .item.hide{opacity:0;max-height:0;pointer-events:none;padding-top:0;padding-bottom:0;border-bottom-width:0;filter:blur(4px);transform:translateY(12px)}
     .item img{width:70px;height:70px;border-radius:6px;object-fit:cover;flex-shrink:0;background:var(--dark2);transition:transform .25s ease, box-shadow .25s ease}
@@ -132,7 +133,7 @@
     .gal{background:var(--dark);padding:84px 0}
     .gal h2{color:#fff}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .grid img{width:100%;height:240px;object-fit:cover;border-radius:6px;background:var(--dark2);transition:transform .35s ease, filter .35s ease, box-shadow .35s ease;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+    .grid img{width:100%;height:240px;object-fit:cover;border-radius:6px;background:var(--dark2);transition:transform .35s ease, filter .35s ease, box-shadow .35s ease;box-shadow:0 10px 30px rgba(0,0,0,.18)}
     .grid img:hover{transform:translateY(-5px) scale(1.02);filter:saturate(1.1);box-shadow:0 18px 36px rgba(0,0,0,.2)}
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
     .contact h3{font-family:var(--head);font-size:26px;margin-bottom:18px;color:var(--dark)}
@@ -215,7 +216,7 @@
 
     <section class="about reveal" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
-        <img class="reveal delay-1" src="https://images.pexels.com/photos/27668701/pexels-photo-27668701.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Ember Grill Rochdale flame-grilled meats and vegetables on the charcoal grill" width="1200" height="800" loading="lazy">
+        <img class="reveal delay-1" src="https://images.pexels.com/photos/27668701/pexels-photo-27668701.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Ember Grill Rochdale flame-grilled meats and vegetables" width="1200" height="800">
         <div class="reveal delay-2">
           <div class="kicker">Our story</div>
           <h2 id="about-title">Simple food, done properly.</h2>
@@ -237,21 +238,21 @@
         <p class="sub">Three plates our regulars keep coming back for at Ember Grill Rochdale.</p>
         <div class="cards" style="text-align:left" aria-label="Popular menu items">
           <article class="card reveal delay-1" aria-label="Mixed Kebab Platter">
-            <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Mixed kebab platter with grilled peppers and chicken skewers at Ember Grill Rochdale" width="900" height="700" loading="lazy">
+            <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Mixed kebab platter with grilled peppers and chicken skewers" width="900" height="700">
             <div>
               <h3>Mixed Kebab Platter <span>£18</span></h3>
               <p>Beef and chicken skewers with grilled peppers, onion and house sauce.</p>
             </div>
           </article>
           <article class="card reveal delay-2" aria-label="Charcoal Lamb Skewers">
-            <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Charcoal lamb skewers served with warm bread at Ember Grill Rochdale" width="900" height="700" loading="lazy">
+            <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Charcoal lamb skewers served with warm bread at Ember Grill Rochdale" width="900" height="700">
             <div>
               <h3>Charcoal Lamb Skewers <span>£21</span></h3>
               <p>Marinated overnight and grilled to order. Served with warm bread.</p>
             </div>
           </article>
           <article class="card reveal delay-3" aria-label="Chicken and Pepper Grill">
-            <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Chicken and pepper grill at Ember Grill Rochdale" width="900" height="700" loading="lazy">
+            <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Chicken and pepper grill at Ember Grill Rochdale" width="900" height="700">
             <div>
               <h3>Chicken &amp; Pepper Grill <span>£16</span></h3>
               <p>Juicy chicken pieces with smoky peppers and a squeeze of lemon.</p>
@@ -277,75 +278,75 @@
         </div>
         <div class="list reveal delay-3" aria-label="Ember Grill Rochdale menu list">
           <article class="item" data-c="start" aria-label="Hummus and warm bread menu item">
-            <img src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Hummus and warm bread starter served at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Hummus and warm bread starter served at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Hummus &amp; Warm Bread</h3><span class="p">£7</span></div><p>Creamy chickpea dip with olive oil and paprika.</p></div>
           </article>
           <article class="item" data-c="start" aria-label="Crispy Chicken Wings menu item">
-            <img src="https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Crispy chicken wings starter at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/60616/fried-chicken-chicken-fried-crunchy-60616.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Crispy chicken wings starter at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Crispy Chicken Wings</h3><span class="p">£9</span></div><p>Tossed in our smoky house glaze.</p></div>
           </article>
           <article class="item" data-c="start" aria-label="Soup of the day menu item">
-            <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Soup of the day at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Soup of the day at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Soup of the Day</h3><span class="p">£6</span></div><p>Ask your server for today's pot.</p></div>
           </article>
           <article class="item" data-c="start" aria-label="Garden salad menu item">
-            <img src="https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Garden salad at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Garden salad at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Garden Salad</h3><span class="p">£7</span></div><p>Crisp greens, tomato, cucumber, lemon dressing.</p></div>
           </article>
           <article class="item" data-c="grill" aria-label="Mixed Kebab Platter menu item">
-            <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Mixed Kebab Platter flame-grilled at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Mixed Kebab Platter flame-grilled at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Mixed Kebab Platter</h3><span class="p">£18</span></div><p>Beef and chicken skewers, grilled peppers, sauce.</p></div>
           </article>
           <article class="item" data-c="grill" aria-label="Charcoal Lamb Skewers menu item">
-            <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Charcoal Lamb Skewers at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Charcoal Lamb Skewers at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Charcoal Lamb Skewers</h3><span class="p">£21</span></div><p>Marinated overnight, served with bread.</p></div>
           </article>
           <article class="item" data-c="grill" aria-label="Chicken and Pepper Grill menu item">
-            <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Chicken and pepper grill at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/32973160/pexels-photo-32973160.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Chicken and pepper grill at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Chicken &amp; Pepper Grill</h3><span class="p">£16</span></div><p>Grilled chicken, peppers and lemon.</p></div>
           </article>
           <article class="item" data-c="grill" aria-label="Ribeye Steak menu item">
-            <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Ribeye steak flame grilled at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Ribeye steak flame grilled at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Ribeye Steak</h3><span class="p">£29</span></div><p>300g, flame-grilled to your liking, with butter.</p></div>
           </article>
           <article class="item" data-c="grill" aria-label="Family Grill Feast menu item">
-            <img src="https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Family Grill Feast at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/2233729/pexels-photo-2233729.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Family Grill Feast at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Family Grill Feast</h3><span class="p">£64</span></div><p>Mixed grill for four with sides and bread.</p></div>
           </article>
           <article class="item" data-c="grill" aria-label="Smash Burger menu item">
-            <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Smash burger from Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Smash burger from Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Smash Burger</h3><span class="p">£14</span></div><p>Double beef, cheese, pickles, house sauce, fries.</p></div>
           </article>
           <article class="item" data-c="side" aria-label="Steamed rice menu item">
-            <img src="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Steamed rice side dish served at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Steamed rice side dish served at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Steamed Rice</h3><span class="p">£4</span></div><p>Fragrant long-grain rice.</p></div>
           </article>
           <article class="item" data-c="side" aria-label="Skin-on fries menu item">
-            <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Skin-on fries side dish at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/1583884/pexels-photo-1583884.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Skin-on fries side dish at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Skin-on Fries</h3><span class="p">£5</span></div><p>Crisp, salted, with dipping sauce.</p></div>
           </article>
           <article class="item" data-c="side" aria-label="Grilled vegetables menu item">
-            <img src="https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Grilled vegetables side dish at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/1435895/pexels-photo-1435895.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Grilled vegetables side dish at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Grilled Vegetables</h3><span class="p">£6</span></div><p>Seasonal vegetables off the coals.</p></div>
           </article>
           <article class="item" data-c="side" aria-label="Fresh bread menu item">
-            <img src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Fresh bread served at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Fresh bread served at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Fresh Bread</h3><span class="p">£3</span></div><p>Baked in-house all day.</p></div>
           </article>
           <article class="item" data-c="drink" aria-label="Fresh lemonade menu item">
-            <img src="https://images.pexels.com/photos/2103949/pexels-photo-2103949.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Fresh lemonade drink at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/2103949/pexels-photo-2103949.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Fresh lemonade drink at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Fresh Lemonade</h3><span class="p">£4</span></div><p>Squeezed to order, with mint.</p></div>
           </article>
           <article class="item" data-c="drink" aria-label="Hot tea menu item">
-            <img src="https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Hot tea drink at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/1417945/pexels-photo-1417945.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Hot tea drink at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Hot Tea</h3><span class="p">£3</span></div><p>Black or green, served in a pot.</p></div>
           </article>
           <article class="item" data-c="drink" aria-label="Chocolate brownie menu item">
-            <img src="https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Chocolate brownie dessert at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Chocolate brownie dessert at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Chocolate Brownie</h3><span class="p">£7</span></div><p>Warm, with vanilla ice cream.</p></div>
           </article>
           <article class="item" data-c="drink" aria-label="Ice cream cup menu item">
-            <img src="https://images.pexels.com/photos/1352274/pexels-photo-1352274.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Ice cream cup dessert at Ember Grill Rochdale" width="400" height="400" loading="lazy">
+            <img src="https://images.pexels.com/photos/1352274/pexels-photo-1352274.jpeg?auto=compress&cs=tinysrgb&w=400&h=400" alt="Ice cream cup dessert at Ember Grill Rochdale" width="400" height="400">
             <div class="content"><div class="top"><h3>Ice Cream Cup</h3><span class="p">£5</span></div><p>Vanilla, chocolate or strawberry.</p></div>
           </article>
         </div>
@@ -385,7 +386,7 @@
           <label for="n">Full name</label><input id="n" required aria-label="Full name">
           <div class="f2">
             <div><label for="ph">Phone</label><input id="ph" type="tel" required aria-label="Phone number"></div>
-            <div><label for="g">Guests</label><select id="g" aria-label="Number of guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7+</option></select></div>
+            <div><label for="g">Guests</label><select id="g" aria-label="Number of guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
           </div>
           <div class="f2">
             <div><label for="d">Date</label><input id="d" type="date" required aria-label="Booking date"></div>
