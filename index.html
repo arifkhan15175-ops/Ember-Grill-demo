@@ -62,15 +62,13 @@
     h2{font-family:var(--head);font-size:clamp(30px,4vw,44px);line-height:1.15;color:var(--dark);margin-bottom:16px}
     .center{text-align:center}
     .sub{max-width:580px;color:var(--muted);margin:0 auto 46px}
-    .demo-banner{background:linear-gradient(90deg,#1d1714,#2b201c);color:#f9e0bd;border-bottom:1px solid rgba(255,255,255,.08);padding:10px 16px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;font-weight:700}
-    .demo-notice{display:inline-block;margin-top:14px;padding:10px 14px;border-radius:4px;background:rgba(188,67,22,.07);color:var(--muted);border:1px solid rgba(188,67,22,.22);font-weight:600;font-size:14px}
     .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body);position:relative;overflow:hidden;transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease}
     .btn::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.25),transparent 80%);transform:translateX(-120%);transition:transform .7s ease}
     .btn:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 20px 34px rgba(188,67,22,.28);background:var(--accent-d);border-color:var(--accent-d)}
     .btn:hover::before{transform:translateX(120%)}
     .btn.ghost{background:transparent;border-color:#fff}
     .btn.ghost:hover{background:#fff;color:var(--dark)}
-    .reveal{opacity:0;transform:translateY(35px) scale(.98);transition:opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1), filter .8s ease;filter:blur(6px)}
+    .reveal{opacity:0;transform:translateY(35px) scale(.98);transition:opacity .8s ease, transform 8s cubic-bezier(.2,.7,.2,1), filter .8s ease;filter:blur(6px)}
     .reveal.in-view{opacity:1;transform:none;filter:none}
     .delay-1{transition-delay:.08s}.delay-2{transition-delay:.16s}.delay-3{transition-delay:.24s}.delay-4{transition-delay:.32s}
     header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .25s,box-shadow .25s}
@@ -181,7 +179,6 @@
   </style>
 </head>
 <body>
-  <div class="demo-banner">Demo website concept • Not a real restaurant • Not a real business location</div>
   <header id="hd" aria-label="Primary site header">
     <div class="container nav">
       <a class="logo" href="#top" aria-label="Ember Grill Rochdale home">Ember<b>.</b>Grill</a>
@@ -207,7 +204,6 @@
         <div class="kicker" aria-label="Ember Grill Rochdale opening details">Flame-grilled · Open daily</div>
         <h1 id="hero-title">Ember Grill Rochdale — Fictional Restaurant Concept</h1>
         <p>This is a sample restaurant concept and landing page built to present a premium grill brand. It is not a live restaurant, it is not physically located at any real address, and it is not affiliated with any operating business.</p>
-        <div class="demo-notice" aria-label="Demo website disclaimer">Demo concept only • fictional location • not a real business</div>
         <div class="btns" aria-label="Primary call to action buttons" style="margin-top:26px">
           <a class="btn" href="#contact" aria-label="Reserve a table at Ember Grill Rochdale">Book a Table</a>
           <a class="btn ghost" href="#menu" aria-label="View Ember Grill Rochdale menu">View Menu</a>
