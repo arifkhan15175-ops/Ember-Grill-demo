@@ -23,6 +23,9 @@
   <meta name="ICBM" content="53.6134, -2.1561">
   <link rel="canonical" href="https://arifkhan15175-ops.github.io/Ember-Grill-demo/">
   <link rel="alternate" hreflang="en-GB" href="https://arifkhan15175-ops.github.io/Ember-Grill-demo/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="shortcut icon" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.pexels.com">
@@ -43,10 +46,10 @@
   <meta name="twitter:image" content="https://arifkhan15175-ops.github.io/Ember-Grill-demo/assets/pexels-thomas-chauke-437438-32351197.jpg">
 
   <style>
-    :root{--dark:#181512;--dark2:#241f1a;--cream:#faf6ef;--sand:#efe7d8;--accent:#bc4316;--accent-d:#9e360f;--text:#2b2621;--muted:#6d655b;--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--shadow:0 18px 42px rgba(22,15,11,.18)}
+    :root{--dark:#181512;--dark2:#241f1a;--cream:#faf6ef;--sand:#efe7d8;--accent:#bc4316;--accent-d:#9e360f;--text:#2b2621;--muted:#6d655b;--head:Georgia,"Times New Roman",serif;--body:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--shadow:0 18px 42px rgba(28,20,15,.12)}
     *{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{font-family:var(--body);color:var(--text);background:linear-gradient(180deg,#f8f1e8 0%,#f5efe8 35%,#f4efe8 100%);line-height:1.65;font-size:16px;overflow-x:hidden;opacity:0;transition:opacity .35s ease}
+    body{font-family:var(--body);color:var(--text);background:linear-gradient(180deg,#f8f1e8 0%,#f5efe8 35%,#f4efe8 100%);line-height:1.65;font-size:16px;overflow-x:hidden;opacity:0;transition:opacity .4s ease}
     body.ready{opacity:1}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit;text-decoration:none}
@@ -56,7 +59,7 @@
     h2{font-family:var(--head);font-size:clamp(30px,4vw,44px);line-height:1.15;color:var(--dark);margin-bottom:16px}
     .center{text-align:center}
     .sub{max-width:580px;color:var(--muted);margin:0 auto 46px}
-    .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body);position:relative;overflow:hidden;transition:transform .22s ease, box-shadow .22s ease, background .22s ease, border-color .22s ease}
+    .btn{display:inline-block;background:var(--accent);color:#fff;padding:14px 30px;font-weight:600;border-radius:4px;border:2px solid var(--accent);cursor:pointer;font-size:15px;font-family:var(--body);position:relative;overflow:hidden;transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease}
     .btn::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.25),transparent 80%);transform:translateX(-120%);transition:transform .7s ease}
     .btn:hover{transform:translateY(-2px) scale(1.01);box-shadow:0 20px 34px rgba(188,67,22,.28);background:var(--accent-d);border-color:var(--accent-d)}
     .btn:hover::before{transform:translateX(120%)}
@@ -81,8 +84,8 @@
     .hero{position:relative;min-height:100vh;display:flex;align-items:center;text-align:center;color:#fff;padding:120px 0 80px;overflow:hidden;isolation:isolate}
     .hero-media{position:absolute;inset:0;background:url("assets/pexels-thomas-chauke-437438-32351197.jpg") center center / cover no-repeat;transform:scale(1.12) translateY(0);will-change:transform}
     .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,12,9,.72),rgba(15,12,9,.55),rgba(15,12,9,.7));z-index:1}
-    .hero::after{content:"";position:absolute;inset:-20% auto auto -10%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(255,146,63,.32), rgba(255,146,63,0) 72%);filter:blur(16px);z-index:0}
-    .hero .smoke,.hero .smoke-2,.hero .smoke-3{position:absolute;inset:auto auto -24% -8%;width:62vw;max-width:780px;height:62vw;max-height:780px;border-radius:50%;background:radial-gradient(circle, rgba(255,255,255,.18), rgba(255,255,255,0) 62%);animation:smokeDrift 15s ease-in-out infinite alternate;opacity:.54;z-index:1}
+    .hero::after{content:"";position:absolute;inset:-20% auto auto -10%;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle, rgba(255,146,63,.32), rgba(255,146,63,0) 72%);filter:blur(3px)}
+    .hero .smoke,.hero .smoke-2,.hero .smoke-3{position:absolute;inset:auto auto -24% -8%;width:62vw;max-width:780px;height:62vw;max-height:780px;border-radius:50%;background:radial-gradient(circle,rgba(255,175,98,.42),rgba(255,175,98,0) 64%);animation:smokeDrift 18s ease-in-out infinite alternate}
     .hero .smoke-2{left:auto;right:-8%;bottom:-18%;animation-delay:4s}
     .hero .smoke-3{left:30%;right:auto;bottom:-26%;width:48vw;max-width:640px;height:48vw;max-height:640px;animation-delay:8s}
     .hero .container{position:relative;z-index:2}
@@ -133,7 +136,7 @@
     .gal{background:var(--dark);padding:84px 0}
     .gal h2{color:#fff}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .grid img{width:100%;height:240px;object-fit:cover;border-radius:6px;background:var(--dark2);transition:transform .35s ease, filter .35s ease, box-shadow .35s ease;box-shadow:0 10px 30px rgba(0,0,0,.18)}
+    .grid img{width:100%;height:240px;object-fit:cover;border-radius:6px;background:var(--dark2);transition:transform .35s ease, filter .35s ease, box-shadow .35s ease;box-shadow:0 10px 30px rgba(0,0,0,.12)}
     .grid img:hover{transform:translateY(-5px) scale(1.02);filter:saturate(1.1);box-shadow:0 18px 36px rgba(0,0,0,.2)}
     .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
     .contact h3{font-family:var(--head);font-size:26px;margin-bottom:18px;color:var(--dark)}
@@ -150,7 +153,6 @@
     #ok{display:none;margin-top:16px;padding:13px;background:#e9f6ec;color:#1f6b36;border-radius:4px;font-size:15px}
     footer{background:var(--dark);color:#bdb4a6;padding:46px 0 30px;text-align:center;font-size:14px}
     footer .logo{display:block;margin-bottom:10px}
-    @keyframes floatGlow{0%{transform:translate3d(-10px,30px,0) scale(1)}50%{transform:translate3d(40px,-10px,0) scale(1.08)}100%{transform:translate3d(10px,26px,0) scale(1)}}
     @keyframes smokeDrift{0%{transform:translate3d(0,0,0) scale(.96);opacity:.45}100%{transform:translate3d(30px,-16px,0) scale(1.12);opacity:.9}}
     @media(max-width:860px){
       section{padding:62px 0}
@@ -216,7 +218,7 @@
 
     <section class="about reveal" id="about" aria-labelledby="about-title">
       <div class="container about-grid">
-        <img class="reveal delay-1" src="https://images.pexels.com/photos/27668701/pexels-photo-27668701.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Ember Grill Rochdale flame-grilled meats and vegetables" width="1200" height="800">
+        <img class="reveal delay-1" src="https://images.pexels.com/photos/27668701/pexels-photo-27668701.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800" alt="Ember Grill Rochdale flame-grilled meats and vegetables">
         <div class="reveal delay-2">
           <div class="kicker">Our story</div>
           <h2 id="about-title">Simple food, done properly.</h2>
@@ -238,14 +240,14 @@
         <p class="sub">Three plates our regulars keep coming back for at Ember Grill Rochdale.</p>
         <div class="cards" style="text-align:left" aria-label="Popular menu items">
           <article class="card reveal delay-1" aria-label="Mixed Kebab Platter">
-            <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Mixed kebab platter with grilled peppers and chicken skewers" width="900" height="700">
+            <img src="https://images.pexels.com/photos/16401326/pexels-photo-16401326.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Mixed kebab platter with grilled peppers and chicken skewers at Ember Grill Rochdale">
             <div>
               <h3>Mixed Kebab Platter <span>£18</span></h3>
               <p>Beef and chicken skewers with grilled peppers, onion and house sauce.</p>
             </div>
           </article>
           <article class="card reveal delay-2" aria-label="Charcoal Lamb Skewers">
-            <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Charcoal lamb skewers served with warm bread at Ember Grill Rochdale" width="900" height="700">
+            <img src="https://images.pexels.com/photos/17966630/pexels-photo-17966630.jpeg?auto=compress&cs=tinysrgb&w=900&h=700" alt="Charcoal lamb skewers served with warm bread at Ember Grill Rochdale">
             <div>
               <h3>Charcoal Lamb Skewers <span>£21</span></h3>
               <p>Marinated overnight and grilled to order. Served with warm bread.</p>
